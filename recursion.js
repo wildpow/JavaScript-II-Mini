@@ -1,12 +1,17 @@
 // to test these problems you can run 'node recursion.js' in your terminal
 // Problem 1:
 
-let n = 1;
-while (n <= 10) {
-  console.log('While Loop', n);
-  n++;
+// let n = 1;
+// while (n <= 10) {
+//   console.log('While Loop', n);
+//   n++;
+// }
+const countToTen = (m) => {
+  let n = 1;
+  if (n <= m) return;
+  return `'While Loop' ${countToTen(m - 1)}`;
 }
-
+console.log(countToTen(10));
 // write a recursive - function called countToTen that mimics the while loop above.
 
 // code here
@@ -17,15 +22,15 @@ while (n <= 10) {
 
 // Problem 2:
 
-const factorial = n => {
-  let result = 1;
-  for (let i = 2; i <= n; i++) {
-    result *= i;
-  }
-  return result;
-};
+// const factorial = n => {
+//   let result = 1;
+//   for (let i = 2; i <= n; i++) {
+//     result *= i;
+//   }
+//   return result;
+// };
 
-console.log(factorial(5));
+// console.log(factorial(5));
 
 // write the above functionin a recursive way.
 
